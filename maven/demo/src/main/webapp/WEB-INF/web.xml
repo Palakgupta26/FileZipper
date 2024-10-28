@@ -1,0 +1,41 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <display-name>Zippify File Compression Application</display-name>
+
+  <!-- Servlet Declaration for CompressServlet -->
+  <servlet>
+    <servlet-name>CompressServlet</servlet-name>
+    <servlet-class>com.zippify.servlet.CompressServlet</servlet-class>
+  </servlet>
+
+  <!-- Servlet Mapping for CompressServlet -->
+  <servlet-mapping>
+    <servlet-name>CompressServlet</servlet-name>
+    <url-pattern>/CompressServlet</url-pattern> 
+  </servlet-mapping>
+
+  <!-- Optional: Welcome File -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Optional: Context Parameters -->
+  <context-param>
+    <param-name>fileUploadPath</param-name>
+    <param-value>/path/to/upload</param-value>
+  </context-param>
+
+  <!-- Optional: Error Handling -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+
+</web-app>

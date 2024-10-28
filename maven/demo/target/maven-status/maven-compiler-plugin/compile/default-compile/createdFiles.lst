@@ -1,0 +1,3 @@
+com\zippify\servlet\CompressServlet.class
+com\zippify\compression\HuffmanCompressor$Node.class
+com\zippify\compression\HuffmanCompressor.class
